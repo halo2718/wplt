@@ -3,8 +3,221 @@
     <head>
 	<meta charset="utf-8">
         <title> 果子❤小天</title>
+        <script>
+            var i = 0;
+            function myDate(){
+                var now=new Date();
+                var year=now.getFullYear();
+                var month=now.getMonth()+1;
+                var date=now.getDate();
+                var hours=now.getHours();
+                var minutes=now.getMinutes();
+                var seconds=now.getSeconds();
+
+                if (hours < 10)
+                    hours = "0" + hours;
+            
+                
+                var r_year = 2023;
+                var r_month = 4;
+                var r_date = 16;
+                var r_hours = 17;
+                var r_minutes = 0;
+                var r_seconds = 0;
+
+                var d_year    = 0;
+                var d_month   = 0;
+                var d_date    = 0;
+                var d_hours   = 0;
+                var d_minutes = 0;
+                var d_seconds = 0;
+
+                if (month <4)
+                {
+                    d_year = year - r_year - 1;
+                    if (hours < 17)
+                    {
+                        if(month == 1)
+                        {
+                            d_date = 259 + date - 1;
+                        }
+                        else if(month == 2)
+                        {
+                            d_date = 290 + date - 1;
+                        }
+                        else if(month == 3)
+                        {
+                            d_date = 318 + date - 1;
+                        }
+                        d_hours = 24 - (17 - hours);
+                    }
+                    else
+                    {
+                        if(month == 1)
+                        {
+                            d_date = 259 + date;
+                        }
+                        else if(month == 2)
+                        {
+                            d_date = 290 + date;
+                        }
+                        else if(month == 3)
+                        {
+                            d_date = 318 + date;
+                        }
+                        d_hours = hours - 17;
+                    }
+                    d_minutes = minutes;
+                    d_seconds = seconds;
+
+                }
+                else if(month == 4)
+                {
+                    if (date < 16)
+                    {
+                        d_year = year - r_year - 1;
+                        if(hours < 17)
+                        {
+                            d_date = 349 + date - 1;
+                            d_hours = 24 - (17 - hours);
+                        }
+                        else
+                        {
+                            d_date = 349 + date;
+                            d_hours = hours - 17;
+                        }
+                        d_minutes = minutes;
+                        d_seconds = seconds;
+                    }
+                    else if(date == 16)
+                    {
+                        if(hours < 17)
+                        {
+                            d_year = year - r_year - 1;
+                            d_date = 349 + date - 1;
+                            d_hours = 24 - (17 - hours);
+                            d_minutes = minutes;
+                            d_seconds = seconds;
+                        }
+                        else
+                        {
+                            d_year = year - r_year - 1;
+                            d_date = 0;
+                            d_hours = hours - 17;
+                            d_minutes = minutes;
+                            d_seconds = seconds;
+                        }
+                    }
+                    else
+                    {
+                        d_year = year - r_year;
+                        if(hours < 17)
+                        {
+                            d_date = date - r_date - 1;
+                            d_hours = 24 - (17 - hours);
+                        }
+                        else
+                        {
+                            d_date = date - r_date;
+                            d_hours = hours - 17;
+                        }
+                        d_minutes = minutes;
+                        d_seconds = seconds;
+                    }
+                    d_minutes = minutes;
+                    d_seconds = seconds;
+                }
+                else
+                {
+                    d_year = year - r_year;
+                    if (hours < 17)
+                    {
+                        if(month == 5)
+                        {
+                            d_date = 14 + date - 1;
+                        }
+                        else if(month == 6)
+                        {
+                            d_date = 45 + date - 1;
+                        }
+                        else if(month == 7)
+                        {
+                            d_date = 75 + date - 1;
+                        }
+                        else if(month == 8)
+                        {
+                            d_date = 106 + date - 1;
+                        }
+                        else if(month == 9)
+                        {
+                            d_date = 137 + date - 1;
+                        }
+                        else if(month == 10)
+                        {
+                            d_date = 167 + date - 1;
+                        }
+                        else if(month == 11)
+                        {
+                            d_date = 198 + date - 1;
+                        }
+                        else if(month == 12)
+                        {
+                            d_date = 228 + date - 1;
+                        }
+                        d_hours = 24 - (17 - hours);
+                    }
+                    else
+                    {
+                        if(month == 5)
+                        {
+                            d_date = 14 + date - 1;
+                        }
+                        else if(month == 6)
+                        {
+                            d_date = 45 + date
+                        }
+                        else if(month == 7)
+                        {
+                            d_date = 75 + date
+                        }
+                        else if(month == 8)
+                        {
+                            d_date = 106 + date;
+                        }
+                        else if(month == 9)
+                        {
+                            d_date = 137 + date;
+                        }
+                        else if(month == 10)
+                        {
+                            d_date = 167 + date;
+                        }
+                        else if(month == 11)
+                        {
+                            d_date = 198 + date;
+                        }
+                        else if(month == 12)
+                        {
+                            d_date = 228 + date;
+                        }
+                        d_hours = hours - 17;
+                    }
+                    d_minutes = minutes;
+                    d_seconds = seconds;
+                }
+
+                console.log(d_year)
+                console.log(d_date)
+                document.getElementById("div").innerHTML="我们已经在一起"+d_year+"年"+d_date+"日"+d_hours+"："+d_minutes+"："+d_seconds;
+            }
+            setInterval(myDate, 100);
+        </script>
     </head>
     <body>
+        
         <div align="center"><img src="./a.jpg" /></div>
         <p align="center">小天最爱果子啦！！</p>
+        <div id="div" align="center" style="font-size:20px"></div>
+        
     </body>
+</html>
